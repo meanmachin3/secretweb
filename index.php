@@ -12,7 +12,7 @@
 		<!--//webfonts-->
 </head>
 <body>
-	 <!-----start-main---->
+	 <!--start-main-->
 	 <div class="main">
 		<div class="login-form">
 			<h1>Member Login</h1>
@@ -32,7 +32,7 @@
 							if (isset($_POST['submit'])){		
 								$name = $_POST["username"];
 								$pass = $_POST["password"];
-									if ($name=="user" && $pass == "password") {
+									if ($name=="user" && $pass == "pass") {
 										session_start();
       									$_SESSION["logged_in"] = "YES";
       									header('Location: 1.html');
@@ -51,7 +51,7 @@
 				</form>
 			</div>
       	</div>
-			 <!-----//end-main---->
+			 <!--//end-main-->
 		 		
 </body>
 </html>
