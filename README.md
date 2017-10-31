@@ -1,3 +1,1 @@
-## secretweb
-#Records her each attempted logins for favorite things.
-Site includes a login. Username being crush's name and a password.Hosted on hostinger, provided free server space :|. As a password I told her to enter her favorites things, places, movies, actors, time, dish, drinks, chocolates and only for a specific value it'll open. *None of the above matches the password. After several attempts of login I gave her the actual password. All of her favourite things are recorded in a textfile. 
+
