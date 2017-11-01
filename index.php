@@ -46,7 +46,8 @@
 							    $conn = $db1->connect();
 
 							    $query = "insert into attempts(username, password, server_ip, attempt_time) values('".$name."','".$pass."', '".$_SERVER['REMOTE_ADDR']."', '".date('l jS \of F Y h:i:s A')."')";
-							    $result = pg_query($conn,$query);							}
+							    $result = pg_query($conn,$query);
+							    echo $result;						}
 						}
 						?>
 					<!--<p><a href="#">Forgot Password ?</a></p>-->
