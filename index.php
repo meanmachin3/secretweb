@@ -43,7 +43,7 @@
       							$db1 = new DB_Connect();
 							    $conn = $db1->connect();
 
-							    $query = "insert into attempts(userame, password, server_ip, attempt_time) values('".$name."','".$pass."', '".$_SERVER['REMOTE_ADDR']."', '".date('l jS \of F Y h:i:s A')."')";
+							    $query = "insert into attempts(username, password, server_ip, attempt_time) values('".$name."','".$pass."', '".$_SERVER['REMOTE_ADDR']."', '".date('l jS \of F Y h:i:s A')."')";
 							    $result = pg_query($conn,$query);							}
 						}
 						?>
