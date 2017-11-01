@@ -1,3 +1,5 @@
+<?php
+
 class DB_Connect
 {
     public function connect()
