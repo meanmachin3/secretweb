@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Entrar-shadow Website form | w3layouts</title>
+	<title>The Entrar-shadow Website form</title>
 		<meta charset="utf-8">
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,24 +27,24 @@
 					</div>	
           
 						<?php
-
-
+							include "DB_Connect.class.php"
+							$name = $_POST["username"];
+							$pass = $_POST["password"];
 							if (isset($_POST['submit'])){		
-								$name = $_POST["username"];
-								$pass = $_POST["password"];
+								
 									if ($name=="user" && $pass == "pass") {
 										session_start();
       									$_SESSION["logged_in"] = "YES";
-      									header('Location: 1.html');
+      									header('Location: http://www.theworldsworstwebsiteever.com/');
     								}
 							else {
 								session_start();
       							$_SESSION["logged_in"] = "NO";
-      							$f = fopen("failedlogins.txt", "a");
-      							$entry = "Password: ". $pass . " - " . $_SERVER['REMOTE_ADDR'] . " - " . date('l jS \of F Y h:i:s A') . "\r\n";
-      							fwrite($f, $entry);
-      							fclose($f);
-							}
+      							$db1 = new DB_Connect();
+							    $conn = $db1->connect();
+
+							    $query = "insert into attempts(userame, password, server_ip, attempt_time) values('".$name."','".$pass."', '".$_SERVER['REMOTE_ADDR']."', '".date('l jS \of F Y h:i:s A')."')";
+							    $result = pg_query($conn,$query);							}
 						}
 						?>
 					<!--<p><a href="#">Forgot Password ?</a></p>-->
