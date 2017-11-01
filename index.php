@@ -27,7 +27,9 @@
 					</div>	
           
 						<?php
-							include "DB_Connect.class.php"
+						error_reporting(E_ALL);
+
+							include "DB_Connect.class.php";
 							$name = $_POST["username"];
 							$pass = $_POST["password"];
 							if (isset($_POST['submit'])){		
